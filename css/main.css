@@ -1,0 +1,520 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "SF UI Text", sans-serif;
+}
+
+@font-face {
+  font-family: 'SF UI Text';
+  font-weight: 700;
+  src: url("../fonts/SFUIText Heavy.woff2") format("woff2"), url("../fonts/SFUIText Heavy.woff") format("woff"), url("../fonts/SFUIText Heavy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'SF UI Text';
+  font-weight: 600;
+  src: url("../fonts/SFUIText Bold.woff2") format("woff2"), url("../fonts/SFUIText Bold.woff") format("woff"), url("../fonts/SFUIText Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'SF UI Text';
+  font-weight: 500;
+  src: url("../fonts/SFUIText Semibold.woff2") format("woff2"), url("../fonts/SFUIText Semibold.woff") format("woff"), url("../fonts/SFUIText Semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'SF UI Text';
+  font-weight: 400;
+  src: url("../fonts/SFUIText Medium.woff2") format("woff2"), url("../fonts/SFUIText Medium.woff") format("woff"), url("../fonts/SFUIText Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'SF UI Text';
+  font-weight: 300;
+  src: url("../fonts/SFUIText Regular.woff2") format("woff2"), url("../fonts/SFUIText Regular.woff") format("woff"), url("../fonts/SFUIText Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'SF UI Text';
+  font-weight: 200;
+  src: url("../fonts/SFUIText Light.woff2") format("woff2"), url("../fonts/SFUIText Light.woff") format("woff"), url("../fonts/SFUIText Light.ttf") format("truetype");
+}
+
+body {
+  background: #fafafa;
+  overflow-x: hidden;
+}
+
+.cadastroLogin {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 1440px) {
+  .cadastroLogin {
+    margin: 80px 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .cadastroLogin {
+    height: auto;
+  }
+}
+
+.cadastroLogin .container {
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 960px) {
+  .cadastroLogin .container {
+    padding: 0 24px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.cadastroLogin__box {
+  position: relative;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 10px #3333331F;
+          box-shadow: 0 0 10px #3333331F;
+  border-radius: 30px;
+  padding: 30px 30px 48px 30px;
+  max-width: 545px;
+  height: 710px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 960px) {
+  .cadastroLogin__box {
+    height: 740px;
+    padding: 20px 20px 48px 20px;
+  }
+}
+
+.cadastroLogin__box__logo {
+  max-width: 200px;
+  margin: 0 0 25px 0;
+}
+
+.cadastroLogin__box__title {
+  color: #333333;
+  font-weight: 300;
+}
+
+.cadastroLogin__box__title,
+.cadastroLogin__box__title span {
+  font: 22px/1.25 "SF UI Text", sans-serif;
+}
+
+.cadastroLogin__box__title span {
+  color: #1ABC9C;
+  display: block;
+  font-weight: 600;
+}
+
+.cadastroLogin__box__description {
+  font: 300 16px/25px "SF UI Text", sans-serif;
+  margin: 20px 0 32px 0;
+}
+
+.cadastroLogin__box__tabs {
+  position: relative;
+}
+
+.cadastroLogin__box__tabs__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 56px 0;
+}
+
+.cadastroLogin__box__tabs__links__link {
+  color: #C4C4C4;
+  -webkit-transition: 600ms ease-in-out;
+  transition: 600ms ease-in-out;
+  font: 22px/1.25 "SF UI Text", sans-serif;
+  font-weight: 200;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transition: right 1s linear;
+  transition: right 1s linear;
+}
+
+.cadastroLogin__box__tabs__links__link::before {
+  content: "";
+  height: 4px;
+  background: #1ABC9C;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  border-radius: 100px;
+  -webkit-transition: 800ms ease-in-out;
+  transition: 800ms ease-in-out;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cadastroLogin__box__tabs__links__link.open {
+  color: #333333;
+  font-weight: 600;
+  right: 79%;
+}
+
+@media screen and (max-width: 960px) {
+  .cadastroLogin__box__tabs__links__link.open {
+    right: 64%;
+  }
+}
+
+.cadastroLogin__box__tabs__links__link.open[data-tab="login"] {
+  right: 87%;
+}
+
+@media screen and (max-width: 960px) {
+  .cadastroLogin__box__tabs__links__link.open[data-tab="login"] {
+    right: 78%;
+  }
+}
+
+.cadastroLogin__box__tabs__links__link.open::before {
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.cadastroLogin__box__tabs__contents__content {
+  -webkit-transition: height 300ms ease-in-out;
+  transition: height 300ms ease-in-out;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s;
+  overflow: hidden;
+  -webkit-animation: fade 1.2s forwards;
+          animation: fade 1.2s forwards;
+}
+
+@-webkit-keyframes fade {
+  from {
+    -webkit-transform: translateY(32px);
+            transform: translateY(32px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fade {
+  from {
+    -webkit-transform: translateY(32px);
+            transform: translateY(32px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.cadastroLogin__box__tabs__contents__content.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cadastroLogin__box__tabs__contents__content > div {
+  width: 100%;
+}
+
+.cadastroLogin__box__tabs__contents__content__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cadastroLogin__box__tabs__contents__content .prefixo {
+  margin: 0 8px 0 0;
+  position: relative;
+  width: 128px;
+}
+
+.cadastroLogin__box__tabs__contents__content .prefixo::before {
+  content: url("../assets/icon-chevron-down.svg");
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.cadastroLogin__box__tabs__contents__content input,
+.cadastroLogin__box__tabs__contents__content select,
+.cadastroLogin__box__tabs__contents__content option {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FFFFFF;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 6px #3333331F;
+          box-shadow: 0 0 6px #3333331F;
+  border: 1px solid #f4f4f4;
+  font: 300 16px/1.25 "SF UI Text", sans-serif;
+  color: #51627F;
+  padding: 9px 16px;
+  margin: 0 0 20px 0;
+}
+
+.cadastroLogin__box__tabs__contents__content input::-webkit-input-placeholder,
+.cadastroLogin__box__tabs__contents__content select::-webkit-input-placeholder,
+.cadastroLogin__box__tabs__contents__content option::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.cadastroLogin__box__tabs__contents__content input:-ms-input-placeholder,
+.cadastroLogin__box__tabs__contents__content select:-ms-input-placeholder,
+.cadastroLogin__box__tabs__contents__content option:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.cadastroLogin__box__tabs__contents__content input::-ms-input-placeholder,
+.cadastroLogin__box__tabs__contents__content select::-ms-input-placeholder,
+.cadastroLogin__box__tabs__contents__content option::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.cadastroLogin__box__tabs__contents__content input::placeholder,
+.cadastroLogin__box__tabs__contents__content select::placeholder,
+.cadastroLogin__box__tabs__contents__content option::placeholder {
+  opacity: 1;
+}
+
+.cadastroLogin__box__tabs__contents__content select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.cadastroLogin__box__tabs__contents__content button {
+  margin: 5px 0 0 0;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 35px;
+  font: 600 18px/1.25 "SF UI Text", sans-serif;
+  color: #FFFFFF;
+  background: #1ABC9C;
+  -webkit-box-shadow: 0 0 10px #3333331F;
+          box-shadow: 0 0 10px #3333331F;
+}
+
+.cadastroLogin__box__tabs__contents__content__esqueci {
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: #333333;
+  font: 300 16px/19px "SF UI Text", sans-serif;
+  margin: -6px 0 24px 0;
+}
+
+.cadastroLogin__box__footer {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 20px;
+  width: calc(100% - 30px);
+}
+
+.cadastroLogin__box__footer span {
+  display: block;
+  color: #333333;
+  font: 200 14px/1.25 "SF UI Text", sans-serif;
+  text-align: center;
+}
+
+.cadastroLogin__carrossel {
+  position: relative;
+  width: 610px;
+  height: 480px;
+}
+
+@media screen and (max-width: 960px) {
+  .cadastroLogin__carrossel {
+    width: 100%;
+    height: auto;
+    margin: 48px 0 0 0;
+  }
+}
+
+.cadastroLogin__carrossel__image {
+  display: none;
+}
+
+.cadastroLogin__carrossel__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.cadastroLogin__carrossel__image:nth-child(odd) {
+  -webkit-animation: fadeBottom 600ms ease-in-out;
+          animation: fadeBottom 600ms ease-in-out;
+}
+
+.cadastroLogin__carrossel__image:nth-child(even) {
+  -webkit-animation: fadeTop 600ms ease-in-out;
+          animation: fadeTop 600ms ease-in-out;
+}
+
+.cadastroLogin__carrossel__image.open {
+  display: block;
+}
+
+@-webkit-keyframes fadeTop {
+  from {
+    -webkit-transform: translate(56px, 56px);
+            transform: translate(56px, 56px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeTop {
+  from {
+    -webkit-transform: translate(56px, 56px);
+            transform: translate(56px, 56px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes fadeBottom {
+  from {
+    -webkit-transform: translate(-56px, -56px);
+            transform: translate(-56px, -56px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeBottom {
+  from {
+    -webkit-transform: translate(-56px, -56px);
+            transform: translate(-56px, -56px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.cadastroLogin__carrossel__bullets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0 0 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+  bottom: -16px;
+}
+
+.cadastroLogin__carrossel__bullets span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #A8B4B1;
+  border-radius: 100px;
+  margin: 0 4px;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+  cursor: pointer;
+}
+
+.cadastroLogin__carrossel__bullets span.open {
+  background: #1ABC9C;
+}
+/*# sourceMappingURL=main.css.map */

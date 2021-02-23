@@ -1,0 +1,49 @@
+// SFUI TEXT
+@font-face {
+    font-family: 'SF UI Text';
+    font-weight: 700;
+    src:
+        url('../fonts/SFUIText\ Heavy.woff2') format('woff2'),
+        url('../fonts/SFUIText\ Heavy.woff') format('woff'),
+        url('../fonts/SFUIText\ Heavy.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SF UI Text';
+    font-weight: 600;
+    src:
+        url('../fonts/SFUIText\ Bold.woff2') format('woff2'),
+        url('../fonts/SFUIText\ Bold.woff') format('woff'),
+        url('../fonts/SFUIText\ Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SF UI Text';
+    font-weight: 500;
+    src:
+        url('../fonts/SFUIText\ Semibold.woff2') format('woff2'),
+        url('../fonts/SFUIText\ Semibold.woff') format('woff'),
+        url('../fonts/SFUIText\ Semibold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SF UI Text';
+    font-weight: 400;
+    src:
+        url('../fonts/SFUIText\ Medium.woff2') format('woff2'),
+        url('../fonts/SFUIText\ Medium.woff') format('woff'),
+        url('../fonts/SFUIText\ Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SF UI Text';
+    font-weight: 300;
+    src:
+        url('../fonts/SFUIText\ Regular.woff2') format('woff2'),
+        url('../fonts/SFUIText\ Regular.woff') format('woff'),
+        url('../fonts/SFUIText\ Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SF UI Text';
+    font-weight: 200;
+    src:
+        url('../fonts/SFUIText\ Light.woff2') format('woff2'),
+        url('../fonts/SFUIText\ Light.woff') format('woff'),
+        url('../fonts/SFUIText\ Light.ttf') format('truetype');
+}

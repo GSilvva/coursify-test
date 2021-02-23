@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursify</title>
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <script defer src="./js/login-cadastro.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="cadastroLogin">
+
+        <div class="container">
+
+            <div class="cadastroLogin__box">
+                <figure class="cadastroLogin__box__logo">
+                    <img src="./assets/logo.svg" alt="Logo Coursify">
+                </figure>
+                <h1 class="cadastroLogin__box__title">Seja bem vindo ao <span>Coursify.Me Enterprise</span></h1>
+                <p class="cadastroLogin__box__description">Althought the bobcast is realy seen, it is the most common wildcat in North America.</p>
+
+                <div class="cadastroLogin__box__tabs">
+                    <header class="cadastroLogin__box__tabs__links">
+                        <h2 data-tab="cadastro" class="cadastroLogin__box__tabs__links__link open">Cadastro</h2>
+                        <h2 data-tab="login" class="cadastroLogin__box__tabs__links__link">Login</h2>
+                    </header>
+                    <div class="cadastroLogin__box__tabs__contents">
+                        <form id="cadastro" class="cadastroLogin__box__tabs__contents__content open" action="/">
+                            <input name="nomeEscola" id="nomeEscola" type="text" placeholder="Nome da Escola">
+                            <input name="email" id="email" type="email" placeholder="Seu e-mail">
+                            <input name="senha" id="senha" type="password" placeholder="Crie uma senha">
+                            <div class="cadastroLogin__box__tabs__contents__content__flex">
+                                <div class="prefixo">
+                                    <select name="prefixo" id="prefixo">
+                                        <option value="55">+55</option>
+                                        <option value="44">+44</option>
+                                        <option value="33">+33</option>
+                                        <option value="22">+22</option>
+                                        <option value="11">+11</option>
+                                    </select>
+                                </div>
+                                <input name="celular" id="celular" type="text" placeholder="00 00000-0000">
+                            </div>
+                            <button type="submit">Cadastrar</button>
+                        </form>
+                        <form id="login" class="cadastroLogin__box__tabs__contents__content" action="/">
+                            <input name="email" id="email" type="text" placeholder="E-mail">
+                            <input name="senha" id="senha" type="password" placeholder="Senha">
+                            <a class="cadastroLogin__box__tabs__contents__content__esqueci" href="#">Esqueci minha senha</a>
+                            <button type="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+
+                <footer class="cadastroLogin__box__footer">
+                    <span>2020 © Coursify.Me. Todos os direitos reservados</span>
+                </footer>
+            </div>
+
+            <div class="cadastroLogin__carrossel">
+                <figure id="slide1" class="cadastroLogin__carrossel__image open">
+                    <img src="./assets/image_01.svg" alt="Ilustração 1">
+                </figure>
+                <figure id="slide2" class="cadastroLogin__carrossel__image">
+                    <img src="./assets/image_02.svg" alt="Ilustração 2">
+                </figure>
+                <div class="cadastroLogin__carrossel__bullets">
+                    <span class="open" data-bullet="slide1"></span>
+                    <span data-bullet="slide2"></span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

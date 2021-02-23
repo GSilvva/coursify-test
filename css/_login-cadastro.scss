@@ -1,0 +1,332 @@
+body {
+    background: #fafafa;
+    overflow-x: hidden;
+}
+
+.cadastroLogin {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 1440px) {
+        margin: 80px 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        height: auto;
+    }
+
+    .container {
+        max-width: 1260px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: $tablet) {
+            padding: 0 24px;
+            flex-direction: column;
+        }
+    }
+
+    &__box {
+        position: relative;
+        background: $white;
+        box-shadow: 0 0 10px #3333331F;
+        border-radius: 30px;
+        padding: 30px 30px 48px 30px;
+        max-width: 545px;
+        height: 710px;
+        box-sizing: border-box;
+
+        @media screen and (max-width: $tablet) {
+            height: 740px;
+            padding: 20px 20px 48px 20px;
+        }
+
+        &__logo {
+            max-width: 200px;
+            margin: 0 0 25px 0;
+        }
+
+        &__title {
+            color: $black;
+            font-weight: 300;
+
+            &,
+            & span {
+                font: 22px/1.25 $fonts;
+            }
+            span {
+                color: $green;
+                display: block;
+                font-weight: 600;
+            }
+        }
+
+        &__description {
+            font: 300 16px/25px $fonts;
+            margin: 20px 0 32px 0;
+        }
+
+        &__tabs {
+            position: relative;
+
+            &__links {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0 0 56px 0;
+
+                &__link {
+                    color: $light-grey;
+                    transition: 600ms ease-in-out;
+                    font: 22px/1.25 $fonts;
+                    font-weight: 200;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transition: right 1s linear;
+
+                    &::before {
+                        content: "";
+                        height: 4px;
+                        background: $green;
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+                        transform: translateY(100%);
+                        border-radius: 100px;
+                        transition: 800ms ease-in-out;
+                        width: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+
+                    &.open {
+                        color: $black;
+                        font-weight: 600;
+                        right: 79%;
+
+                        @media screen and (max-width: $tablet) {
+                            right: 64%;
+                        }
+
+                        &[data-tab="login"] {
+                            right: 87%;
+
+                            @media screen and (max-width: $tablet) {
+                                right: 78%;
+                            }
+                        }
+
+                        &::before {
+                            width: 100%;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+
+            &__contents {
+
+                &__content {
+                    transition: height 300ms ease-in-out;
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                    transition: max-height 1s;
+                    overflow: hidden;
+                    animation: fade 1.2s forwards;
+
+                    @keyframes fade {
+                        from {
+                            transform: translateY(32px);
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                        to {
+                            transform: translateY(0);
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    &.open {
+                        display: flex;
+                    }
+
+                    & > div {
+                        width: 100%;
+                    }
+
+                    &__flex {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+
+                    .prefixo {
+                        margin: 0 8px 0 0;
+                        position: relative;
+                        width: 128px;
+
+                        &::before {
+                            content: url("../assets/icon-chevron-down.svg");
+                            position: absolute;
+                            top: 10px;
+                            right: 15px;
+                            transition: 300ms;
+                        }
+                    }
+
+                    input,
+                    select,
+                    option {
+                        display: block;
+                        width: 100%;
+                        box-sizing: border-box;
+                        background: $white;
+                        border-radius: 8px;
+                        box-shadow: 0 0 6px #3333331F;
+                        border: 1px solid #f4f4f4;
+                        font: 300 16px/1.25 $fonts;
+                        color: $dark-blue;
+                        padding: 9px 16px;
+                        margin: 0 0 20px 0;
+
+                        &::placeholder {
+                            opacity: 1;
+                        }
+                    }
+
+                    select {
+                        appearance: none;
+                    }
+
+                    button {
+                        margin: 5px 0 0 0;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        padding: 10px 35px;
+                        font: 600 18px/1.25 $fonts;
+                        color: $white;
+                        background: $green;
+                        box-shadow: 0 0 10px #3333331F;
+                    }
+
+                    &__esqueci {
+                        width: 100%;
+                        display: block;
+                        text-align: left;
+                        color: $black;
+                        font: 300 16px/19px $fonts;
+                        margin: -6px 0 24px 0;
+                    }
+
+                }
+            }
+        }
+
+        &__footer {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+            width: calc(100% - 30px);
+
+            span {
+                display: block;
+                color: $black;
+                font: 200 14px/1.25 $fonts;
+                text-align: center;
+            }
+        }
+    }
+
+    &__carrossel {
+        position: relative;
+        width: 610px;
+        height: 480px;
+
+        @media screen and (max-width: $tablet) {
+            width: 100%;
+            height: auto;
+            margin: 48px 0 0 0;
+        }
+
+        &__image {
+            display: none;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            &:nth-child(odd) {
+                animation: fadeBottom 600ms ease-in-out;
+            }
+
+            &:nth-child(even) {
+                animation: fadeTop 600ms ease-in-out;
+            }
+
+            &.open {
+                display: block;
+            }
+
+            @keyframes fadeTop {
+                from {
+                    transform: translate(56px, 56px);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                to {
+                    transform: translate(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            @keyframes fadeBottom {
+                from {
+                    transform: translate(-56px, -56px);
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                to {
+                    transform: translate(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &__bullets {
+            display: flex;
+            margin: 16px 0 0 0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            bottom: -16px;
+
+            span {
+                display: block;
+                width: 12px;
+                height: 12px;
+                background: $grey;
+                border-radius: 100px;
+                margin: 0 4px;
+                transition: 600ms;
+                cursor: pointer;
+
+                &.open {
+                    background: $green;
+                }
+            }
+        }
+    }
+}
